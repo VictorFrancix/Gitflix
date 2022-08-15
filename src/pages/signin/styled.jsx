@@ -27,7 +27,7 @@ export const Divider = styled.main`
   }
   
 `
-export const Buttonzera = styled.button`
+export const Button = styled.button`
     width: 50%;
     border: none;
     border-radius: 0.3rem;
@@ -40,7 +40,7 @@ export const Buttonzera = styled.button`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
 
     &:disabled {
       opacity: 0;
@@ -123,7 +123,7 @@ export const FormInputField = styled(Input)`
     font-size: 1.5rem !important;
 `
 
-export const Button = styled.span`
+export const Link = styled.span`
   width: 90%;
   border: none;
   border-radius: 0.5rem;

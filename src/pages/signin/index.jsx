@@ -16,7 +16,7 @@ export default function Login() {
       showPassword: false,
     });
     
-  const REGEX_EMAIL = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const REGEX_EMAIL = /\S+@\S+\.\S+/;
   
   const minPasswordLength = 6;
 
@@ -83,8 +83,8 @@ export default function Login() {
             />
           </FormControl>
               
-          <S.Buttonzera type="submit" disabled = {!REGEX_EMAIL || values.password.length <= minPasswordLength}>Entrar</S.Buttonzera>
-          <S.Button onClick={() => navigate("/signup")}>First time? Create an account!</S.Button>
+          <S.Button type="submit" disabled = {!REGEX_EMAIL.test(values.email) || values.password.length <= minPasswordLength}>Entrar</S.Button>
+          <S.Link onClick={() => navigate("/signup")}>First time? Create an account!</S.Link>
         </S.Form>
       </S.ContainerForm>
     </S.Divider>
