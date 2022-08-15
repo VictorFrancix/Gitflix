@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
+
 export const GlobalStyles = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@300;400;700&display=swap');
     /* http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
     License: none (public domain)
@@ -32,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-
+	font-family: 'Yantramanav', sans-serif;
 }
 ol, ul {
 	list-style: none;
