@@ -84,7 +84,7 @@ export default function Login() {
           </FormControl>
               
           <S.Button type="submit" disabled = {!REGEX_EMAIL.test(values.email) || values.password.length <= minPasswordLength}>Entrar</S.Button>
-          <S.Link onClick={() => navigate("/signup")}>First time? Create an account!</S.Link>
+          <S.Link onClick={() => navigate("/sign-up")}>First time? Create an account!</S.Link>
         </S.Form>
       </S.ContainerForm>
     </S.Divider>
