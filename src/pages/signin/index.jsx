@@ -8,6 +8,7 @@ import FormControl from '@mui/material/FormControl';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import EmailIcon from '@material-ui/icons/Email';
+import gitflix from "./../../assets/images/gitflix.png"
 
 export default function Login() {
   const [values, setValues] = React.useState({
@@ -38,6 +39,10 @@ export default function Login() {
   return (
     <S.Divider>
       <S.ContainerForm>
+        <S.Logo>
+            <h1><span>Git</span>flix</h1>
+            <img src={gitflix} alt="logo" />
+        </S.Logo>
         <S.Form>
           <FormControl variant="standard" classes={{root :  "form-control"}}>
             <InputLabel htmlFor="standard-adornment-email" classes={{root : "input-label"}}>Email</InputLabel>
@@ -83,7 +88,9 @@ export default function Login() {
             />
           </FormControl>
               
-          <S.Button type="submit" disabled = {!REGEX_EMAIL.test(values.email) || values.password.length <= minPasswordLength}>Entrar</S.Button>
+          <S.Button type="submit" disabled = {!REGEX_EMAIL.test(values.email) || values.password.length <= minPasswordLength}>
+            Enter
+          </S.Button>
           <S.Link onClick={() => navigate("/sign-up")}>First time? Create an account!</S.Link>
         </S.Form>
       </S.ContainerForm>

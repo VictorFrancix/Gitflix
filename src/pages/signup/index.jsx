@@ -9,6 +9,7 @@ import Visibility from "@material-ui/icons/Visibility"
 import VisibilityOff from "@material-ui/icons/VisibilityOff"
 import EmailIcon from "@material-ui/icons/Email"
 import BadgeIcon from "@mui/icons-material/Badge"
+import gitflix from "./../../assets/images/gitflix.png"
 
 export default function SignUp() {
   const [values, setValues] = React.useState({
@@ -22,7 +23,6 @@ export default function SignUp() {
 
   const REGEX_EMAIL = /\S+@\S+\.\S+/
 
-	const minPasswordLength = 6
 
   const handleClickShowPassword = (prop) => {
     setValues({ ...values, [prop]: !values[prop] })
@@ -41,6 +41,10 @@ export default function SignUp() {
   return (
     <S.Divider>
       <S.ContainerForm>
+				<S.Logo>
+					<h1><span>Git</span>flix</h1>
+					<img src={gitflix} alt="logo" />
+				</S.Logo>
         <S.Form>
           <FormControl variant="standard" classes={{ root: "form-control" }}>
             <InputLabel
@@ -153,8 +157,9 @@ export default function SignUp() {
             type="submit"
             disabled={
               !REGEX_EMAIL.test(values.email) ||
-              values.password.length <= minPasswordLength ||
-              values.password !== values.confirmPassword
+              values.password.length <= 6 ||
+              values.password !== values.confirmPassword || 
+              values.name.length <= 2
             }
           >
             Register

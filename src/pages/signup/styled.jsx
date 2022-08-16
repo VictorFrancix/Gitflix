@@ -4,6 +4,10 @@ import Input from "@mui/material/Input"
 export const Divider = styled.main`
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background: rgb(0, 0, 0);
   background-image: linear-gradient(
       65deg,
@@ -21,51 +25,76 @@ export const Divider = styled.main`
     background-size:cover; 
     align-items: flex-start;
   }
+`
+
+export const Logo = styled.header`
+  font-family: 'Bebas Neue';
+  width: 25%;
+  height: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -8rem 0;
+
+  h1{
+    font-size: 3rem;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+
+    span {
+      color: #5c19b5 ;
+    }
+  }
+
+  img {
+    width: 5rem;
+  }
   
 `
+
 export const Button = styled.button`
-    width: 50%;
-    border: none;
-    border-radius: 0.3rem;
-    margin: 1rem 0;
-    padding: 1rem 1rem;
-    font-size: 1rem;
-    background-color: #7124b4;
+  width: 50%;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 1rem 0;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  background-color: #5c19b5;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  &:disabled {
+    opacity: 0;
+    cursor: default;
+  }
+
+  &:hover {
+    background-color: #7124b4 !important;
     color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
+  }
 
-    &:disabled {
-      opacity: 0;
-      cursor: default;
-    }
-   
-
-    @media (min-width: 768px) {
-    }
 
 
 `
 
 export const ContainerForm = styled.div`
+  margin-top: -5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   height: 75vh;
-  
-  .input-label, svg{
-    color: #fff !important;
-  
-  }
 
   @media (min-width: 768px) {
     width: 40%;
     height: 100vh;
     margin-left: 2rem;
+    margin-top: 0;
   }
 `
 
@@ -79,27 +108,29 @@ export const Form = styled.form`
   .form-control{
     height: 25% !important;
     width: 80%;
-    padding-bottom: 1rem;
-    
-    .MuiInputBase-root.MuiInput-root::after{
-      border-bottom: 2px solid #5c19b5;
-      
+    padding-bottom: 1.5rem;
+
+    .input-label, svg{
+      color: #fff !important;
     }
 
-    .MuiInputBase-root.MuiInput-root::before{
-      border-bottom: 2px solid #fff;
-      
+
+    .MuiInputBase-root.MuiInput-root{
+      &::after{
+        border-bottom: 2px solid #5c19b5;
+      }
+
+      &:before{
+        border-bottom: 2px solid #fff;
+      }
   }
-  
-  @media (min-width: 375px) {
-    width: 100%;
+  @media (min-width: 768px) and (max-width: 900px) {
+    width: 110%;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 900px){
     width: 150%;
-  }
-  @media (min-width: 900px) and (max-width: 1200px) {
-    width: 110%;
+    padding-bottom: 0.75rem;
   }
 }
   
@@ -117,7 +148,12 @@ export const FormInputField = styled(Input)`
     border: none !important;
     background-color: rgba(51, 50, 50, 0) !important;
     color: #fff !important;
-    font-size: 1.5rem !important;
+    font-size: 1.25rem !important;
+    
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+    }
+
 `
 
 export const Link = styled.span`
@@ -130,6 +166,7 @@ export const Link = styled.span`
   color: #fff;
   text-decoration: underline;
   text-align: center;
+
   &:hover {
     color: #fff;
     cursor: pointer;
