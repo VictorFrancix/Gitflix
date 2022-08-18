@@ -29,9 +29,7 @@ export default function CustomizedSnackbars({
       console.log(error);
     }
   };
-
   
-
   return (
     <Stack spacing={2} sx={{ width: "100%" }}>
       <Snackbar open={open} autoHideDuration={15000} onClose={handleClose}  anchorOrigin={{ vertical, horizontal }} TransitionComponent={Slide}>

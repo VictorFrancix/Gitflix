@@ -14,6 +14,7 @@ import gitflix from "./../../assets/images/gitflix.png";
 import api from "../../services/api.jsx";
 import DataContext from "./../../providers";
 import * as S from "./styled.jsx";
+import Loading from "./../../components/Loading";
 
 export default function SignIn() {
   const [values, setValues] = React.useState({
@@ -149,7 +150,7 @@ export default function SignIn() {
                 !REGEX_EMAIL.test(values.email) || values.password.length <= 6
               }
             >
-              Enter
+              {loading ? <Loading /> : "Login"}
             </S.Button>
 
             <S.Link onClick={() => navigate("/sign-up")}>
