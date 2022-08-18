@@ -1,5 +1,5 @@
-import { DataProvider } from "./DataContext";
+import { createContext } from "react";
 
-export default function AppProvider({ children }) {
-    return <DataProvider>{children}</DataProvider>;
-}
+const DataContext = createContext({});
+
+export default DataContext;
