@@ -101,7 +101,7 @@ export default function Login() {
                 required={true}
                 value={values.password}
                 onChange={handleChange("password")}
-                suggested={"current-password"}
+                disabled={false}
                 endAdornment={
                   <InputAdornment position="end">
                     <IconButton
