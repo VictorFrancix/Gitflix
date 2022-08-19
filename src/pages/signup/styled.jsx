@@ -130,6 +130,7 @@ export const Form = styled.form`
     height: 25% !important;
     width: 80%;
     padding-bottom: 1.5rem;
+    margin-bottom: 0.75em;
 
     .input-label,
     svg {
@@ -148,11 +149,13 @@ export const Form = styled.form`
 
     @media (min-width: 768px) and (max-width: 900px) {
       width: 120%;
+      margin-bottom: 0;
     }
 
     @media (min-width: 900px) {
       width: 150%;
       padding-bottom: 0.75rem;
+      margin-bottom: 0;
     }
   }
 

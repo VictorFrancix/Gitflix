@@ -32,7 +32,7 @@ export default function CustomizedSnackbars({
   
   return (
     <Stack spacing={2} sx={{ width: "100%" }}>
-      <Snackbar open={open} autoHideDuration={15000} onClose={handleClose}  anchorOrigin={{ vertical, horizontal }} TransitionComponent={Slide}>
+      <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}  anchorOrigin={{ vertical, horizontal }} TransitionComponent={Slide}>
         <Alert onClose={handleClose} severity={severity} sx={{ width: "100%" }}>
           {message}
         </Alert>

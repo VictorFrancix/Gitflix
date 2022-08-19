@@ -38,10 +38,10 @@ export default function SignIn() {
   const REGEX_EMAIL = /\S+@\S+\.\S+/;
 
   async function login(event) {
+    setLoading(true);
     event.preventDefault();
 
     try {
-      setLoading(true);
 
       delete values.showPassword;
       const body = { ...values };
@@ -153,7 +153,7 @@ export default function SignIn() {
               {loading ? <Loading /> : "Login"}
             </S.Button>
 
-            <S.Link onClick={() => navigate("/sign-up")}>
+            <S.Link onClick={loading? null : () => navigate("/sign-up")}>
               First time? Create an account!
             </S.Link>
           </S.Form>
