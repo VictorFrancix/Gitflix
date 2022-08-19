@@ -147,7 +147,7 @@ export default function SignIn() {
             <S.Button
               type="submit"
               disabled={
-                !REGEX_EMAIL.test(values.email) || values.password.length <= 6
+                !REGEX_EMAIL.test(values.email) || values.password.length <= 6 || loading
               }
             >
               {loading ? <Loading /> : "Login"}

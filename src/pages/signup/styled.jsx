@@ -42,6 +42,7 @@ export const Logo = styled.header`
     font-weight: 400;
     color: #fff;
     text-align: center;
+    cursor: default;
 
     span {
       color: #5c19b5;
@@ -50,6 +51,12 @@ export const Logo = styled.header`
 
   img {
     width: 5rem;
+    transition: all 1s;
+    transform-style: preserve-3d;
+
+    &:hover {
+      transform: rotateY(-180deg);
+    }
   }
   @media (min-width: 900px) {
     h1 {
@@ -70,7 +77,7 @@ export const Logo = styled.header`
 export const Button = styled.button`
   width: 50%;
   border: none;
-  border-radius: 0.7rem;
+  border-radius: 0.5rem;
   margin: 1rem 0;
   padding: 1rem 1rem;
   font-size: 1rem;
@@ -83,11 +90,12 @@ export const Button = styled.button`
   transition: all 0.5s ease-in-out;
 
   &:disabled {
-    opacity: 0;
+    color: #0FFFFF00;
+    background-color: #000000;
     cursor: default;
   }
 
-  &:hover {
+  &:enabled:hover {
     background-color: #7124b4 !important;
     color: #fff;
   }
