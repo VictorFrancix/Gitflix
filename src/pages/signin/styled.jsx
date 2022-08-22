@@ -91,7 +91,7 @@ export const Button = styled.button`
   transition: all 0.5s ease-in-out;
 
   &:disabled {
-    color: #0FFFFF00;
+    color: #0fffff00;
     background-color: #000000;
     cursor: default;
   }

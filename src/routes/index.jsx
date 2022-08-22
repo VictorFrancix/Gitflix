@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DataContext from "../providers";
 import SignUp from "./../pages/signup";
 import SignIn from "./../pages/signin";
+import Home from "./../pages/home";
 
 export default function Router() {
   const [open, setOpen] = useState(false);
@@ -34,6 +35,7 @@ export default function Router() {
         <Routes>
           <Route path="/" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/home" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </DataContext.Provider>

@@ -34,8 +34,18 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html {
+	scroll-behavior: smooth;
+}
 body {
 	font-family: 'Yantramanav', sans-serif;
+	background-color: #000000;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+::-webkit-scrollbar {
+	width: 0px;
+	background: transparent;
 }
 ol, ul {
 	list-style: none;
